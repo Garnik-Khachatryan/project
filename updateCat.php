@@ -28,10 +28,11 @@
 <form action="updateCatRequest.php" method="post" class="w-50 m-auto m-3" >
     <div class="form-group" >
         <label for="title" class="text-warning">Title</label>
-        <input type="text" name="update_title" id="title" class="form-control" value="<?= $updateTitle?>">
+        <input type="text" name="title" id="title" class="form-control" value="<?= $updateTitle?>">
     </div>
     <div>
         <button class="btn btn-outline-warning" name="updateCat">Update  Categorie</button>
+        <input type="hidden" name="categorie_id" value=<?php echo $id ?>>
     </div>
 </form>
 </body>

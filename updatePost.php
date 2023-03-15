@@ -48,7 +48,8 @@ $link=mysqli_connect('localhost','root','','projectdb');
             <label for="img" class="text-warning mt-2">Upload Img</label>
             <input type="file" name="updateImg" id="img" class="form-control">
        </div>
-        <button class="btn btn-outline-warning" name="update_post_submit">Update</button>
+        <input type="submit" class="btn btn-outline-warning" name="update_post_submit" value="Update">
+        <input type="hidden" name="post_id" value=<?php echo $id ?> >
     </form>
 </body>
 </html>

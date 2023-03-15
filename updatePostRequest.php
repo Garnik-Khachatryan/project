@@ -9,7 +9,7 @@ if (isset($_POST['update_post_submit']))
     $img_tmp_name=$_FILES['updateImg']['tmp_name'];
     $target_file = basename($img_name);
     move_uploaded_file( $_FILES['updateImg']['tmp_name'], $target_file);
-    $query = "UPDATE post_table SET `title` = '$postTitle', `content` = '$postContent', `img` = '$target_file' WHERE `id` = ". $_POST['id'];
+    $query = "UPDATE post_table SET `title` = '$postTitle', `content` = '$postContent', `img` = '$target_file' WHERE `id` = ". $_POST['post_id'];
     $res = mysqli_query($link,$query)or die(mysqli_connect_error($link));;
     echo "<script>alert('Success')</script>";
 }
